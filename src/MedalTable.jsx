@@ -1,14 +1,10 @@
 import Button from "./Button";
 function MedalTable({ dataList, setDataList }) {
-  // storage 이벤트 핸들러
-
   const handleDelete = (index) => {
     const updatedDataList = dataList.filter((_, i) => i !== index);
     setDataList(updatedDataList);
     localStorage.setItem("medalList", JSON.stringify(updatedDataList));
   };
-
-  //스토리지 이벤트를 적용하려고 했는데  동일한 브라우징 컨텍스트 에서는 작동하지 않아서 실패
 
   return (
     <>
