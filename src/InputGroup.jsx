@@ -1,7 +1,17 @@
 import InputField from "./InputField";
 import Button from "./Button";
 import { useState } from "react";
-
+import styled from "styled-components";
+const StyledForm = styled.form`
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: end;
+  margin: 40px 0;
+  & > *:not(button) {
+    flex-grow: 1;
+  }
+`;
 function InputGroup({ setDataList }) {
   const [formData, setFormData] = useState({
     country: "",
@@ -75,13 +85,14 @@ function InputGroup({ setDataList }) {
   };
 
   return (
-    <form>
+    <StyledForm>
       <InputField
         labelText="국가"
         inputType="text"
         inputName="country"
         inputId="country"
         onChange={handleInputChange}
+        placeholder="국가 입력"
       />
       <InputField
         labelText="금메달"
@@ -89,12 +100,14 @@ function InputGroup({ setDataList }) {
         inputName="gold"
         inputId="gold"
         onChange={handleInputChange}
+        placeholder="0"
       />
       <InputField
         labelText="은메달"
         inputType="number"
         inputName="silver"
         inputId="silver"
+        placeholder="0"
         onChange={handleInputChange}
       />
       <InputField
@@ -103,15 +116,23 @@ function InputGroup({ setDataList }) {
         inputName="bronze"
         inputId="bronze"
         onChange={handleInputChange}
+        placeholder="0"
       />
       <Button
         text="국가 추가"
         type="submit"
         name="add"
         onClick={handleSubmit}
+        variant="primary"
       />
-      <Button text="수정" type="submit" name="edit" onClick={handleSubmit} />
-    </form>
+      <Button
+        text="수정"
+        type="submit"
+        name="edit"
+        onClick={handleSubmit}
+        variant="primary"
+      />
+    </StyledForm>
   );
 }
 
