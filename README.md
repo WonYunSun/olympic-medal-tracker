@@ -2,8 +2,8 @@
 # Olympic Medal Tracker
 - 내일배움캠프 React 7기 입문주차 개인과제
 - Vite와 React, Styled-components를 활용
-## 배포
-배포 링크 :  [🥇 2024 파리 올림픽](https://wonyunsun.github.io/olympic-medal-tracker/)
+## Website
+  > [🥇 2024 파리 올림픽](https://wonyunsun.github.io/olympic-medal-tracker/)
 
 > 
 ![Animation1](https://github.com/user-attachments/assets/42292494-8114-41da-b594-48b9f0b466f2)
